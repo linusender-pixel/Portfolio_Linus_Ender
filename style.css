@@ -26,6 +26,20 @@ header {
   box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  display: block;
+  width: 360px;
+  height: 54px;
+  object-fit: cover;
+  object-position: center;
+}
+
 header h1 {
   margin: 0;
   font-size: 24px;
@@ -224,6 +238,25 @@ footer {
   color: #555;
 }
 
+.footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-brand img {
+  display: block;
+  width: 180px;
+  height: 42px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.footer-brand p {
+  margin: 0;
+}
+
 @media (max-width: 1050px) {
   .projekt-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -235,6 +268,11 @@ footer {
     flex-direction: column;
     gap: 15px;
     padding: 20px;
+  }
+
+  .brand img {
+    width: 260px;
+    height: 50px;
   }
 
   nav a {
