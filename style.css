@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #2a5298;
+}
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 160px 20px;
+  background-image: linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)
+  ),
+  url("background.jpg.avif");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.klein,
+.section-label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2a5298;
+}
+
+.hero .klein {
+  color: #ffffff;
+}
+
+.hero h2 {
+  font-size: 56px;
+  line-height: 1.1;
+  margin: 20px 0;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 720px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 15px 30px;
+  background-color: white;
+  color: #1e3c72;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  background-color: #eaeaea;
+}
+
+.button.dark {
+  background-color: #1e3c72;
+  color: white;
+}
+
+.button.dark:hover {
+  background-color: #2a5298;
+}
+
+section {
+  padding: 90px 40px;
+  max-width: 1150px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 38px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+.projekt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.projekt {
+  background-color: white;
+  padding: 28px;
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.projekt:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+.projekt img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+
+.projekt-inhalt {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.projekt h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.projekt p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.projekt-button {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 12px 22px;
+  background-color: #1e3c72;
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.projekt-button:hover {
+  transform: translateY(-2px);
+  background-color: #2a5298;
+}
+
+.ueber-mich {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.ueber-mich p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.kontakt {
+  text-align: center;
+  background-color: white;
+  border-radius: 28px;
+  margin-bottom: 70px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.kontakt p {
+  font-size: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 35px;
+  background-color: white;
+  color: #555;
+}
+
+@media (max-width: 1050px) {
+  .projekt-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  nav a {
+    margin: 0 8px;
+    font-size: 14px;
+  }
+
+  .hero h2 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .projekt-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ueber-mich {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 70px 20px;
+  }
+}
